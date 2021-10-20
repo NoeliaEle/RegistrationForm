@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+import Form from './Form'
 
 function App() {
   return (
@@ -8,8 +9,11 @@ function App() {
         <p>
           Registration Form
         </p>
-
       </header>
+      <div className="App-body">
+
+        <Form></Form>
+      </div>
     </div>
   );
 }
