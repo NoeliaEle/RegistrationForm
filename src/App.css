@@ -44,7 +44,7 @@ body {
 .column-one, .column-two {
   display: flex;
   flex-direction: column;
-  height: 100px;
+  height: 200px;
 }
 
 .column-two {
