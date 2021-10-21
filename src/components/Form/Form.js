@@ -5,12 +5,16 @@ import PasswordValidation from '../PasswordValidation/PasswordValidation'
 import '../../App.css';
 
 class Form extends Component {
+
   state = {
     email: '',
-    password: ''
+    validPassword: false
   }
-  callback = (value) => {
-    value ? console.log("Value is true!") : console.log("Value is false")
+
+  updateValidPassword(value) {
+    this.setState({
+      validPassword: value
+    })
   }
 
   handleInput(event) {
@@ -19,7 +23,6 @@ class Form extends Component {
     this.setState({
       [key]: value
     })
-    // console.log(this.state.password)
   }
 
   render() {
@@ -33,18 +36,11 @@ class Form extends Component {
             </div>
           </div>
           <div className="column-two">
-            <div className="password-field">
-              <label>Password:</label>
-              <input type="password" name="password" value={this.state.password} onChange={(e) => this.handleInput(e)} />
-            </div>
-            <PasswordValidation typedPassword={this.state.password} parentCallback={this.callback}></PasswordValidation>
-            <button className="submit-button">Submit</button>
+            <PasswordValidation parentCallback={value => this.updateValidPassword(value)}></PasswordValidation>
+            <button className="submit-button" disabled={!this.state.validPassword || !this.state.email}>Submit</button>
           </div>
         </section>
-      </form>
-
-
-
+      </form >
     )
   }
 }
