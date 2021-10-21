@@ -20,6 +20,8 @@ const Form = () => {
         </div>
         <div className="column-two">
           <PasswordValidation parentCallback={value => setValidPassword(value)}></PasswordValidation>
+        </div>
+        <div className="component-three">
           <button className="submit-button" disabled={!validPassword || !email}>Submit</button>
         </div>
       </section>

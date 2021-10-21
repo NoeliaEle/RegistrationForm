@@ -31,25 +31,26 @@ body {
 
 .form-card {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  gap: 4em 1em;
   width: fit-content;
-  margin: auto;
-  text-align: left;
   background-color: white;
   border-radius: 10px;
-  justify-content: space-evenly;
-  padding: 3em 3em;
+  padding: 3em 5em;
   box-shadow: 8px 8px 10px 0 #806c757d;
 }
 
-.column-one, .column-two {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  padding: 0em 2em;
+.column-one {
+  flex: 1 45%;
 }
 
 .column-two {
-  justify-content: space-between;
+  flex: 1 45%;
+}
+
+.component-three {
+  flex: 0 1 48%;
 }
 
 label {
@@ -65,6 +66,7 @@ input {
   background-color: inherit;
   height: 2em;
   margin-bottom: 1em;
+  width: 90%;
 }
 
 button {
@@ -73,7 +75,6 @@ button {
   border-radius: 5em;
   color: white;
   padding: 0.5em 2em;
-  margin-top: 2em;
   font-size: 1em;
   font-weight: bold;
 }
@@ -92,7 +93,9 @@ button:disabled, button[disabled] {
 
 @media screen and (max-width: 768px) {
   .form-card {
-    flex-direction: row-reverse;
+    flex-flow: row-reverse wrap;
+    justify-content: end;
+    gap: 0em 1em;
   }
 }
 
@@ -102,10 +105,9 @@ button:disabled, button[disabled] {
   }
   .form-card {
     flex-direction: column;
-    width: fit-content;
-    padding: 2em 2em;
+    gap: 1em;
   }
-  .column-one, .column-two {
-    padding: 2em 2em;
+  .submit-button {
+    margin-top: 1em;
   }
 }
