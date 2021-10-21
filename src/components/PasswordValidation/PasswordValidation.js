@@ -1,4 +1,4 @@
-import React, { useState, isValidElement } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import PasswordChecklist from "react-password-checklist"
 
@@ -6,8 +6,6 @@ import PasswordChecklist from "react-password-checklist"
 
 const PasswordValidation = ({ parentCallback }) => {
   const [password, setPassword] = useState("")
-
-
   return (
     <div>
       <div className="password-field">
