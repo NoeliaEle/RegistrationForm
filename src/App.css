@@ -1,10 +1,11 @@
 html, body, #app, #app>div {
   height: 100vh;
   margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 body {
-  background-color: #D3F6DB;
+  background: linear-gradient(145deg, #F72585, #fff)
 }
 
 #nav-bar {
@@ -12,13 +13,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1em 2em 1em 2em;
-  height: 3vh;
+  padding: 0.5em;
   min-height: 50px;
   top: 0;
-  background-color: #fff;
+  background-color: #3A0CA3;
   font-size: 1em;
-  color: #303030;
+  font-weight: bold;
+  color: #fff;
 }
 
 .header {
@@ -28,23 +29,23 @@ body {
   height: 89vh;
 }
 
-.fields-component {
+.form-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 500px;
+  width: fit-content;
   margin: auto;
   text-align: left;
-  background-color: #fafafe;
+  background-color: white;
   border-radius: 10px;
   justify-content: space-evenly;
-  padding: 5em 0;
+  padding: 3em 3em;
+  box-shadow: 8px 8px 10px 0 #806c757d;
 }
 
 .column-one, .column-two {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: fit-content;
+  padding: 0em 2em;
 }
 
 .column-two {
@@ -53,12 +54,44 @@ body {
 
 label {
   display: block;
-  font-size: 0.5 rem;
-  color: #3d658f;
+  font-size: 0.8em;
+  color: #3A0CA3;
+  padding: 1em 0;
+}
+
+input {
+  border: none;
+  border-bottom: 0.5px solid #3A0CA3;
+  background-color: inherit;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+button {
+  border: none;
+  background-color: #F72585;
+  border-radius: 5em;
+  color: white;
+  padding: 0.5em 2em;
+  margin-top: 2em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #EC096F;
+}
+
+button:disabled, button[disabled] {
+  background-color: #FBB1D4;
+}
+
+.Password-checklist {
+  font-size: 0.8em;
 }
 
 @media screen and (max-width: 768px) {
-  .fields-component {
+  .form-card {
     flex-direction: row-reverse;
   }
 }
@@ -67,8 +100,12 @@ label {
   #nav-bar {
     padding: 0.5em 0.2em !important;
   }
-  .fields-component {
+  .form-card {
     flex-direction: column;
-    width: 250px;
+    width: fit-content;
+    padding: 2em 2em;
+  }
+  .column-one, .column-two {
+    padding: 2em 2em;
   }
 }

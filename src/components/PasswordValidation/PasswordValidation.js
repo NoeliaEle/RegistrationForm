@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import PasswordChecklist from "react-password-checklist"
+import '../../App.css';
 
 
 
@@ -23,7 +24,10 @@ const PasswordValidation = ({ parentCallback }) => {
           capital: "uppercase letter",
           number: "number",
           specialChar: "special character",
+
         }}
+        className="Password-checklist"
+        iconSize={10}
       />
     </div>
   )

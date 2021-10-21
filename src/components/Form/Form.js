@@ -11,7 +11,7 @@ const Form = () => {
 
   return (
     <form>
-      <section className="fields-component">
+      <section className="form-card">
         <div className="column-one">
           <div className="email-field">
             <label>Email:</label>
