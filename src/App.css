@@ -56,3 +56,19 @@ label {
   font-size: 0.5 rem;
   color: #3d658f;
 }
+
+@media screen and (max-width: 768px) {
+  .fields-component {
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #nav-bar {
+    padding: 0.5em 0.2em !important;
+  }
+  .fields-component {
+    flex-direction: column;
+    width: 250px;
+  }
+}
