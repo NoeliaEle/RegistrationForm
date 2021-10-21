@@ -5,15 +5,15 @@ import Form from './Form'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Registration Form
-        </p>
-      </header>
-      <div className="App-body">
+      <nav id="nav-bar">
 
+        Registration Form
+
+      </nav>
+      <section class="header">
         <Form></Form>
-      </div>
+      </section>
+
     </div>
   );
 }

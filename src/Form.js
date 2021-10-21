@@ -17,15 +17,30 @@ class Form extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Email:</label>
-          <input type="email" name="email" value={this.state.email} onChange={(e) => this.handleInput(e)} />
-          <label>Password:</label>
-          <input type="password" name="password" value={this.state.password} onChange={(e) => this.handleInput(e)} />
-          <button>Submit</button>
-        </form>
-      </div>
+
+
+
+      <form onSubmit={this.handleFormSubmit}>
+        <section class="fields-component">
+          <div class="column-one">
+
+            <div class="email-field">
+              <label>Email:</label>
+              <input type="email" name="email" value={this.state.email} onChange={(e) => this.handleInput(e)} />
+            </div>
+          </div>
+          <div class="column-two">
+            <div class="password-field">
+              <label>Password:</label>
+              <input type="password" name="password" value={this.state.password} onChange={(e) => this.handleInput(e)} />
+            </div>
+            <button class="submit-button">Submit</button>
+          </div>
+        </section>
+      </form>
+
+
+
     )
   }
 }

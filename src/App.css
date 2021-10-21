@@ -1,49 +1,58 @@
-.App {
-  text-align: center;
+html, body, #app, #app>div {
+  height: 100vh;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #D3F6DB;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #fff;
-  min-height: 8vh;
+#nav-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+  height: 3vh;
+  min-height: 50px;
+  top: 0;
+  background-color: #fff;
   font-size: 1em;
   color: #303030;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.App-body {
-  background-color: #D3F6DB;
-  min-height: 92vh;
+.header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #303030;
+  height: 89vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fields-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  text-align: left;
+  background-color: #fafafe;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  padding: 5em 0;
+}
+
+.column-one, .column-two {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+
+.column-two {
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+  font-size: 0.5 rem;
+  color: #3d658f;
 }
