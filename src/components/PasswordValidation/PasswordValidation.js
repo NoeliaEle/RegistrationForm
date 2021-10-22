@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+
 import PasswordChecklist from "react-password-checklist"
 //PasswordCheckList makes tests fails. Deactivate for running tests
+
 import './PasswordValidation.css';
 
 const PasswordValidation = ({ parentCallback }) => {
@@ -8,8 +10,8 @@ const PasswordValidation = ({ parentCallback }) => {
   return (
     <div>
       <div className="password-field">
-        <label>Password:</label>
-        <input type="password" onChange={e => setPassword(e.target.value)}></input>
+        <label htmlFor="password">Password:</label>
+        <input id="password-input-field" type="password" onChange={e => setPassword(e.target.value)}></input>
       </div>
       <PasswordChecklist
         rules={["minLength", "lowercase", "capital", "number", "specialChar"]}

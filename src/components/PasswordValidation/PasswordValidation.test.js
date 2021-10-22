@@ -1,7 +1,8 @@
+import { render, screen } from '@testing-library/react';
+import PasswordValidation from './PasswordValidation';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PasswordValidation from './PasswordValidation';
-import { render, screen } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
 
 it('It should mount', () => {

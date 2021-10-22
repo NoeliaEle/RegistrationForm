@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom'
 
 import PasswordValidation from '../PasswordValidation/PasswordValidation'
+
 import './Form.css';
 
 
@@ -29,7 +29,7 @@ const Form = () => {
       <section className="card">
         <div className="column-one">
           <div className="email-field">
-            <label>Email:</label>
+            <label htmlFor="email-input-field">Email:</label>
             <input id="email-input-field" type="email" name="email" value={email} onChange={(value) => setEmail(value.target.value)} />
           </div>
         </div>

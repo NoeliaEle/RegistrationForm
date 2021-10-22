@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 
 const SuccessPage = () => (
   <section className="card">
     <div >
-      Account created  🎉
+      Account created
+      <span role="img" aria-label="ta-da">  🎉</span>
     </div>
   </section>
 );

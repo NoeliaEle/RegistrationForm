@@ -1,12 +1,13 @@
-import React from 'react'
-import './App.css';
-import Form from './components/Form/Form'
-import SuccessPage from './components/SuccessPage/SuccessPage'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import Form from './components/Form/Form'
+import React from 'react'
+import SuccessPage from './components/SuccessPage/SuccessPage'
+
+import './App.css';
 
 function App() {
   return (

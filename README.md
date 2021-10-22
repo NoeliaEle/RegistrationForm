@@ -33,6 +33,11 @@ Cons: React password checklist makes tests to fail.
 
 Another added library is [React-router-dom](https://www.npmjs.com/package/react-router-dom), it wasn't part of the assignment, but it helped to close the loop from a UX perspective when submitting email and password succesfully. 
 
+## Code quality
+The issue `JSX props should not use arrow functions` keeps popping up when testing the code. I have decided to keep the inline arrow functions for now even knowing that in the future with more components, performance can be affected.
+
+A sign-up page is most likely to not contain many elements to allow the user to focus on one task.
+Given the size of the current project and its purpose, I consider more important to make the code as easy to read as possible, knowing that the damages to performance in this case are minimum.
 
 ### Disclaimer
 I have spent time on trying to develop meaninful tests with no clear success. This project covers the basics to ensure the components are displayed on the screen, but I would like to explore how to add tests that cover the business logic and ensure the form is ready to be integrated further. Any feedback is welcome!
