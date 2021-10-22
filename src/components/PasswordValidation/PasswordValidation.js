@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import PasswordChecklist from "react-password-checklist"
-import '../../App.css';
-
-
+//PasswordCheckList makes tests fails. Deactivate for running tests
+import './PasswordValidation.css';
 
 const PasswordValidation = ({ parentCallback }) => {
   const [password, setPassword] = useState("")
@@ -25,8 +24,8 @@ const PasswordValidation = ({ parentCallback }) => {
           specialChar: "special character",
 
         }}
-        className="Password-checklist"
         iconSize={10}
+        className="Password-checklist"
       />
     </div>
   )

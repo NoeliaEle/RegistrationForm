@@ -1,0 +1,45 @@
+.column-one {
+    flex: 1 45%;
+}
+
+.column-two {
+    flex: 1 45%;
+}
+
+.row-button {
+    flex: 0 1 48%;
+}
+
+label {
+    display: block;
+    font-size: 0.8em;
+    color: #3A0CA3;
+    padding: 1em 0;
+}
+
+input {
+    border: none;
+    border-bottom: 0.5px solid #3A0CA3;
+    background-color: inherit;
+    height: 2em;
+    margin-bottom: 1em;
+    width: 90%;
+}
+
+.submit-button {
+    border: none;
+    background-color: #F72585;
+    border-radius: 5em;
+    color: white;
+    padding: 0.5em 2em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #EC096F;
+}
+
+.submit-button:disabled, .submit-button[disabled] {
+    background-color: #FBB1D4;
+}

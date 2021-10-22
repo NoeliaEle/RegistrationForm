@@ -17,7 +17,7 @@ test('renders Email label', () => {
   expect(emailLabel).toBeInTheDocument();
 });
 
-test('Submit button is disabled', () => {
+test('Submit button is disabled by default', () => {
   render(<Form />);
   expect(screen.getByText('Submit')).toBeDisabled()
 });

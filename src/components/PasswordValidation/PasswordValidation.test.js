@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PasswordValidation from './PasswordValidation';
-import { render, screen, toBeInTheDocument } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 it('It should mount', () => {
@@ -11,7 +11,7 @@ it('It should mount', () => {
 });
 
 test('renders password label', () => {
-  render(<Form />);
+  render(<PasswordValidation />);
   const passwordLabel = screen.getByText(/password:/i);
   expect(passwordLabel).toBeInTheDocument();
 });

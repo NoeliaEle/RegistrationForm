@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const SuccessPage = () => (
-  <section className="form-card">
+  <section className="card">
     <div >
       Account created  🎉
     </div>
