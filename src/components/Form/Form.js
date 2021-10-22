@@ -37,7 +37,7 @@ const Form = () => {
           <PasswordValidation parentCallback={handleChange}></PasswordValidation>
         </div>
         <div className="row-button">
-          <button className="submit-button" disabled={!validPassword || !email}>Submit</button>
+          <button type="submit" className="submit-button" disabled={!validPassword || !email}>Submit</button>
         </div>
       </section>
     </form >
