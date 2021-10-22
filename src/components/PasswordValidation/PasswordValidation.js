@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import PasswordChecklist from "react-password-checklist"
 import '../../App.css';
 
@@ -17,7 +16,7 @@ const PasswordValidation = ({ parentCallback }) => {
         rules={["minLength", "lowercase", "capital", "number", "specialChar"]}
         minLength={8}
         value={password}
-        onChange={(isValid) => { parentCallback(isValid) }}
+        onChange={(isValid) => { parentCallback(isValid, password) }}
         messages={{
           minLength: "8+ characters",
           lowercase: "lowercase letter",
@@ -32,11 +31,5 @@ const PasswordValidation = ({ parentCallback }) => {
     </div>
   )
 }
-
-PasswordValidation.propTypes = {};
-
-PasswordValidation.defaultProps = {
-
-};
 
 export default PasswordValidation;

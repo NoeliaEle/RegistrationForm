@@ -1,17 +1,32 @@
 import React from 'react'
 import './App.css';
 import Form from './components/Form/Form'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import SuccessPage from './components/SuccessPage/SuccessPage'
 
 function App() {
   return (
-    <div className="App">
-      <nav id="nav-bar">
-        Registration Form
+    <Router>
+      <div className="App">
+        <nav id="nav-bar">
+          Registration Form
       </nav>
-      <section className="header">
-        <Form></Form>
-      </section>
-    </div>
+        <section className="header">
+          <Switch>
+            <Route exact path="/">
+              <Form />
+            </Route>
+            <Route path="/success">
+              <SuccessPage />
+            </Route>
+          </Switch>
+        </section>
+      </div>
+    </Router>
   );
 }
 
